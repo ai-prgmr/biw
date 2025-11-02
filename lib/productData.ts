@@ -24,6 +24,7 @@ export const categories: Category[] = [
   { name: "Washers & Nuts", slug: "washers_nuts" },
   { name: "Screws", slug: "screws" },
   { name: "Miscellaneous", slug: "miscellaneous" },
+  { name: "Perforated Sheets", slug: "perforated_sheets" },
 ];
 
 export const productsData: Record<string, ProductType[]> = {
@@ -353,6 +354,104 @@ export const productsData: Record<string, ProductType[]> = {
       sizes: ["N/A"],
       customization: ["N/A"],
       basePrice: 0.8,
+    },
+  ],
+  perforated_sheets: [
+    {
+      id: "aluminium-perforated-sheets",
+      name: "Aluminium Perforated Sheets",
+      slug: "aluminium-perforated-sheets",
+      categorySlug: "perforated_sheets",
+      description:
+        "Lightweight and corrosion-resistant sheets, ideal for filtration, architectural facades, and ventilation systems where weight is a factor.",
+      image: "/images/aluminium-ps.webp",
+      sizes: ["Custom Hole Sizes"],
+      customization: ["Based on Requirement"],
+      basePrice: 100,
+    },
+    {
+      id: "crc-perforated-sheets",
+      name: "CRC Perforated Sheets",
+      slug: "crc-perforated-sheets",
+      categorySlug: "perforated_sheets",
+      description:
+        "Cold Rolled Coil (CRC) sheets offering a smooth finish and excellent flatness, suitable for interior decoration and general manufacturing.",
+      image: "/images/crc-ps.webp",
+      sizes: ["Custom Thickness"],
+      customization: ["Based on Requirement"],
+      basePrice: 100,
+    },
+    {
+      id: "industrial-perforated-sheets",
+      name: "Industrial Perforated Sheets",
+      slug: "industrial-perforated-sheets",
+      categorySlug: "perforated_sheets",
+      description:
+        "High-strength, durable sheets designed for heavy-duty applications like conveyor screens, machinery guards, and sound absorption panels.",
+      image: "/images/industrial-ps.webp",
+      sizes: ["Heavy Gauge"],
+      customization: ["Based on Requirement"],
+      basePrice: 100,
+    },
+    {
+      id: "metal-perforated-sheets",
+      name: "Metal Perforated Sheets",
+      slug: "metal-perforated-sheets",
+      categorySlug: "perforated_sheets",
+      description:
+        "General-purpose perforated metal sheets offering a balance of strength and airflow, widely used across various industries for screening and safety.",
+      image: "/images/metal-ps.webp",
+      sizes: ["Standard and Custom"],
+      customization: ["Based on Requirement"],
+      basePrice: 100,
+    },
+    {
+      id: "mild-steel-perforated-sheets",
+      name: "Mild Steel Perforated Sheets",
+      slug: "mild-steel-perforated-sheets",
+      categorySlug: "perforated_sheets",
+      description:
+        "The most economical option, offering good strength and formability, typically used for non-corrosive or coated environments.",
+      image: "/images/ms-ps.webp",
+      sizes: ["Various Gauges"],
+      customization: ["Based on Requirement"],
+      basePrice: 100,
+    },
+    {
+      id: "stainless-steel-perforated-sheets",
+      name: "Stainless Steel Perforated Sheets",
+      slug: "stainless-steel-perforated-sheets",
+      categorySlug: "perforated_sheets",
+      description:
+        "Excellent corrosion and heat resistance, making them ideal for food processing, chemical plants, and high-moisture architectural use.",
+      image: "/images/ss-ps.jpg",
+      sizes: ["304 and 316 Grade"],
+      customization: ["Based on Requirement"],
+      basePrice: 100,
+    },
+    {
+      id: "z-channel-perforated-sheets",
+      name: "Z Channel Perforated Sheets",
+      slug: "z-channel-perforated-sheets",
+      categorySlug: "perforated_sheets",
+      description:
+        "Perforated sheets formed into a Z-shaped channel, adding structural rigidity, commonly used as rails, framing, or decorative trim.",
+      image: "/images/z-channel.png",
+      sizes: ["Custom Lengths"],
+      customization: ["Based on Requirement"],
+      basePrice: 100,
+    },
+    {
+      id: "c-channel-perforated-sheets",
+      name: "C Channel Perforated Sheets",
+      slug: "c-channel-perforated-sheets",
+      categorySlug: "perforated_sheets",
+      description:
+        "Perforated sheets formed into a C-shaped channel, providing robust support and ease of mounting, often used for cable trays and light framing.",
+      image: "/images/C-Channel.png",
+      sizes: ["Custom Widths"],
+      customization: ["Based on Requirement"],
+      basePrice: 100,
     },
   ],
 };

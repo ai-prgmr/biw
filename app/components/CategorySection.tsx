@@ -27,6 +27,23 @@ export default function CategorySection() {
       slug: "chains",
       description: "Durable links for lifting, pulling, and securing.",
     },
+    {
+      name: "Washers and Nuts",
+      slug: "washers_nuts",
+      description:
+        "Paired components for distributing load and locking bolted joints.",
+    },
+    {
+      name: "Screws",
+      slug: "screws",
+      description:
+        "Threaded fasteners used to join and hold materials together.",
+    },
+    {
+      name: "Perforated Sheets",
+      slug: "perforated_sheets",
+      description: "Durable sheets for screening, ventilation, or aesthetics.",
+    },
   ];
   const categoryContainerVariants = {
     hidden: { opacity: 0 },
@@ -74,7 +91,7 @@ export default function CategorySection() {
             <Link href={`/${category.slug}`} className="block h-full">
               <div className="h-full rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group cursor-pointer border border-gray-200 hover:border-indigo-600">
                 <div className="bg-white p-6">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors duration-300">
+                  <h3 className="h-14 text-2xl font-semibold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors duration-300">
                     {category.name}
                   </h3>
                   <p className="text-gray-600 text-sm">

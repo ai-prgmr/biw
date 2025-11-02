@@ -42,7 +42,7 @@ export default function Search() {
       <input
         type="text"
         placeholder="Search for Nails, Bolts, Chains..."
-        className="w-full px-6 py-3 rounded-full border-2 border-red-500 text-white placeholder:text-white text-lg shadow-lg focus:border-none focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200"
+        className="w-full px-6 py-3 rounded-md border-2 border-red-500 text-white placeholder:text-white text-xl shadow-lg focus:border-none focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200"
         value={searchQuery}
         onChange={handleSearchChange}
       />

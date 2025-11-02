@@ -2,7 +2,7 @@ import Link from "next/link";
 import Catalogue from "./Catalogue";
 export default function Export() {
   return (
-    <section className="bg-gray-800 text-white w-full text-center py-12">
+    <section className="bg-gray-800 text-white w-full text-center py-12 mb-12">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-6">
           Global Reach: We Export Worldwide

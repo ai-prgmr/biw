@@ -39,16 +39,14 @@ export default function FeaturedProducts() {
 
   return (
     <motion.section
-      className="container mx-auto px-4 py-16 bg-gray-50/50"
+      className="container mx-auto px-4 py-16"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}
       variants={featuredContainerVariants}
     >
       <div className="flex justify-between items-center mb-12">
-        <h2 className="text-4xl font-bold text-gray-900">
-          Our Featured Products
-        </h2>
+        <h2 className="text-4xl font-bold text-gray-900">Best Sellers</h2>
         <Link
           href="/products"
           className="inline-flex items-center text-indigo-600 font-semibold hover:text-indigo-800 transition-colors group"
@@ -65,53 +63,12 @@ export default function FeaturedProducts() {
         {gridItems.map((product, index) => (
           <motion.div key={index} variants={featuredItemVariants}>
             {product ? (
-              /* Standard Product Card */
-              //   <Link href={`/products/${product.slug}`} className="block h-full">
-              //     <div className="h-full flex flex-col bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group border border-gray-100 hover:border-indigo-300 transform hover:-translate-y-1">
-              //       {/* Product Image Placeholder */}
-              //       <div className="aspect-square bg-gray-50 p-6 flex items-center justify-center border-b border-gray-100">
-              //         <Image
-              //           src={product.image}
-              //           alt={product.name}
-              //           fill
-              //           className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
-              //         />
-              //       </div>
-
-              //       {/* Product Info */}
-              //       <div className="p-4 flex flex-col flex-grow">
-              //         <span className="text-xs font-medium text-indigo-500 uppercase tracking-wider mb-1">
-              //           {product.categorySlug}
-              //         </span>
-              //         <h3 className="text-lg font-bold text-gray-900 mb-2 truncate">
-              //           {product.name}
-              //         </h3>
-              //         <p className="text-sm text-gray-600 mb-3 line-clamp-2 flex-grow">
-              //           {product.description ||
-              //             "High-quality, durable iron component."}
-              //         </p>
-              //         <div className="mt-auto flex justify-between items-center">
-              //           <span className="text-xl font-extrabold text-gray-900">
-              //             ${(product as ProductType).basePrice.toFixed(2)}
-              //           </span>
-              //           <motion.button
-              //             whileHover={{ scale: 1.05 }}
-              //             whileTap={{ scale: 0.95 }}
-              //             className="p-2 rounded-full bg-indigo-500 text-white hover:bg-indigo-600 transition-colors shadow-md"
-              //             aria-label={`Add ${product.name} to cart`}
-              //           >
-              //             <ShoppingCart className="w-5 h-5" />
-              //           </motion.button>
-              //         </div>
-              //       </div>
-              //     </div>
-              //   </Link>
               <Link
                 href={`/${product.slug}/${product.slug}`}
                 className="block h-full"
               >
                 <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden h-full flex flex-col border border-gray-100 hover:border-indigo-300">
-                  <div className="relative w-full h-100 flex items-center justify-center overflow-hidden">
+                  <div className="relative w-full h-70 flex items-center justify-center overflow-hidden">
                     <Image
                       src={product.image}
                       alt={product.name}

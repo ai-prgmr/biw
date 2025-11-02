@@ -8,6 +8,7 @@ import {
 } from "@/lib/productData";
 import Link from "next/link";
 import Image from "next/image";
+import { Factory, ShieldCheck, Zap } from "lucide-react";
 // Function to process and group the product data
 const getGroupedProducts = (): Record<string, ProductType[]> => {
   const grouped: Record<string, ProductType[]> = {};
@@ -28,13 +29,13 @@ const getGroupedProducts = (): Record<string, ProductType[]> => {
 };
 
 const groupedProducts = getGroupedProducts();
-const totalProductCount = Object.values(groupedProducts).flat().length;
 
 // Helper to get the display name of a category
 const getCategoryDisplayName = (slug: string): string => {
   // Use the actual imported categories array
   return categories.find((c: Category) => c.slug === slug)?.name || slug;
 };
+
 export default function ProductsPage() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -50,9 +51,34 @@ export default function ProductsPage() {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
   };
+  const title = "Our Products";
+  const tagline =
+    "Engineered for maximum tensile strength and durability. Choose from various coatings, including Galvanized and Zinc Plated.";
   return (
     <section className="min-h-screen bg-gray-50 pb-16">
-      <div className="container mx-auto px-4 py-12">
+      {/* Primary Title and Tagline */}
+      <div className="bg-gray-900 py-8 px-4 mx-auto max-w-full text-center mb-12 lg:py-16 lg:px-12">
+        <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
+          {title}
+        </h1>
+        <p className="mb-8 text-lg font-normal text-gray-200 lg:text-xl sm:px-16 xl:px-48">
+          {tagline}
+        </p>
+
+        {/* Key Value Propositions (Sub-header features) */}
+        <div className="mt-6 flex flex-wrap gap-x-8 gap-y-3 text-lg font-medium justify-center">
+          <span className="flex items-center text-blue-400">
+            <Factory className="h-4 w-4 mr-2" /> Made in India
+          </span>
+          <span className="flex items-center text-blue-400">
+            <ShieldCheck className="h-4 w-4 mr-2" /> ISO 9001 Certified
+          </span>
+          <span className="flex items-center text-blue-400">
+            <Zap className="h-4 w-4 mr-2" /> Fast Dispatch
+          </span>
+        </div>
+      </div>
+      <div className="container mx-auto px-4 pb-12">
         {/* Product Grid */}
         {Object.keys(groupedProducts).map((categorySlug) => (
           <motion.section
@@ -64,8 +90,13 @@ export default function ProductsPage() {
             variants={containerVariants}
           >
             {/* Category Header */}
-            <h3 className="text-3xl font-bold text-gray-900 mb-6 border-l-4 border-indigo-600 pl-4">
-              {getCategoryDisplayName(categorySlug)}
+            <h3 className="text-3xl font-bold text-indigo-600 mb-6 border-l-4 border-indigo-600 pl-4">
+              <Link
+                href={`/${getCategoryDisplayName(categorySlug).toLowerCase()}`}
+                className="hover:underline"
+              >
+                {getCategoryDisplayName(categorySlug)}
+              </Link>
               <span className="text-indigo-500 text-base font-semibold ml-2">
                 ({groupedProducts[categorySlug].length} Products)
               </span>

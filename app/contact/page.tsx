@@ -4,8 +4,8 @@ import { MapPin, Mail, MessageSquare } from "lucide-react";
 
 // --- Configuration ---
 // Replace these placeholders with your actual details
-const CONTACT_EMAIL = "order@biwindore.com";
-const WHATSAPP_NUMBER = "917974889472"; // Start with country code, no symbols
+const CONTACT_EMAIL = "biwindore@gmail.com";
+const WHATSAPP_NUMBER = "+919826186686"; // Start with country code, no symbols
 const WHATSAPP_PREFILL = "Hello, I would like to inquire about Wire Products";
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   WHATSAPP_PREFILL
@@ -23,7 +23,7 @@ const ContactInfo: React.FC = () => (
     {/* Direct Contact Methods */}
 
     {/* Operating Hours (Unchanged) */}
-    <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+    <div className="bg-gray-300 p-8 rounded-xl shadow-lg border border-gray-100">
       <h3 className="text-2xl font-serif text-gray-800 mb-4 font-bold">
         Business Hours
       </h3>
@@ -40,7 +40,7 @@ const ContactInfo: React.FC = () => (
     </div>
 
     {/* Physical Address */}
-    <div className="flex items-center text-lg text-gray-700 p-4 border border-gray-300 rounded-lg bg-white shadow-sm">
+    <div className="flex items-center text-lg text-gray-700 p-4 border border-gray-300 rounded-lg bg-gray-300 shadow-sm">
       <MapPin className="w-6 h-6 mr-3 text-pink-600 flex-shrink-0" />
       <p>
         Plot No - 25/A, Udyog Nagar, Navlakha Road, New Loha Mandi, Near Anaj

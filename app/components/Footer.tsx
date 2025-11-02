@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gray-900 text-white py-12 mt-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
@@ -28,12 +28,36 @@ export default function Footer() {
           <div>
             <h5 className="font-semibold mb-4">Products</h5>
             <ul className="space-y-2 text-gray-400">
-              <li>Nails</li>
-              <li>Nuts & Bolts</li>
-              <li>Washers</li>
-              <li>Hooks & Chains</li>
-              <li>Screws</li>
-              <li>Perforated Sheets</li>
+              <li>
+                <Link href="/nails" className="hover:text-white">
+                  Nails
+                </Link>
+              </li>
+              <li>
+                <Link href="/bolts" className="hover:text-white">
+                  Nuts & Bolts
+                </Link>
+              </li>
+              <li>
+                <Link href="/washers_nuts" className="hover:text-white">
+                  Washers
+                </Link>
+              </li>
+              <li>
+                <Link href="/hooks" className="hover:text-white">
+                  Hooks & Chains
+                </Link>
+              </li>
+              <li>
+                <Link href="/screws" className="hover:text-white">
+                  Screws
+                </Link>
+              </li>
+              <li>
+                <Link href="/perforated-sheets" className="hover:text-white">
+                  Perforated Sheets
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
@@ -59,14 +83,32 @@ export default function Footer() {
           <div>
             <h5 className="font-semibold mb-4">Contact Info</h5>
             <ul className="space-y-2 text-gray-400">
-              <li>Email: info@steelcraft.com</li>
-              <li>Phone: +1 (555) 123-4567</li>
-              <li>Export Inquiries: export@steelcraft.com</li>
+              <li>
+                Email:{" "}
+                <a className="text-red-500" href="mailto:biwindore@gmail.com">
+                  biwindore@gmail.com
+                </a>
+              </li>
+              <li>
+                Phone:{" "}
+                <a className="text-red-500" href="tel:+919826186686">
+                  +91 98261 86686
+                </a>
+              </li>
+              <li>
+                Export Inquiries:{" "}
+                <a className="text-red-500" href="mailto:biwexport@gmail.com">
+                  biwexport@gmail.com
+                </a>
+              </li>
             </ul>
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Barnagar Iron Works. All rights reserved.</p>
+          <p>
+            &copy; 2025 Barnagar Iron Works.Registered Trademark. All rights
+            reserved.
+          </p>
         </div>
       </div>
     </footer>

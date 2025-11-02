@@ -17,6 +17,7 @@ const navLinks = [
       { name: "Chains", href: "/chains" },
       { name: "Washers & Nuts", href: "/washers_nuts" },
       { name: "Screws", href: "/screws" },
+      { name: "Perforated Sheets", href: "/perforated_sheets" },
     ],
   },
   { name: "Contact", href: "/contact" },
@@ -80,7 +81,15 @@ export default function Header() {
           {navLinks.map((link) =>
             link.submenu ? (
               // Submenu
-              <li key={link.name} className="relative group">
+              <li
+                key={link.name}
+                className="relative group"
+                onBlur={(e) => {
+                  if (!e.currentTarget.contains(e.relatedTarget)) {
+                    setSubmenuOpen(false);
+                  }
+                }}
+              >
                 <button
                   onClick={() => setSubmenuOpen(!submenuOpen)}
                   className="flex items-center gap-1 text-white hover:bg-[#B20000] p-2 focus:outline-none"

@@ -102,7 +102,7 @@
 // }
 "use client";
 import * as React from "react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -279,6 +279,7 @@ export default function AboutPage() {
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true, amount: 0.1 },
     transition: { duration: 0.6 },
+    useInView: true,
   };
 
   return (
@@ -321,7 +322,6 @@ export default function AboutPage() {
       </section>
 
       <div className="container mx-auto px-4 py-12">
-        {/* ==== LEGACY (Replaced Section wrapper with motion.section) ==== */}
         <motion.section
           {...fadeInViewProps}
           className="grid md:grid-cols-2 gap-8 items-center mb-16"
@@ -343,7 +343,7 @@ export default function AboutPage() {
           </div>
           <div className="relative h-80 rounded-xl overflow-hidden shadow-xl">
             <Image
-              src="https://placehold.co/400x320/cccccc/333333?text=Legacy+Photo"
+              src="/images/hero-wire-factory.png"
               alt="Historical photo of Barnagar Iron Works"
               fill
               className="object-cover"
@@ -351,10 +351,9 @@ export default function AboutPage() {
           </div>
         </motion.section>
 
-        {/* ==== MISSION & VISION (Replaced Section wrapper with motion.section) ==== */}
         <motion.section
           {...fadeInViewProps}
-          className="bg-gray-50 rounded-2xl p-8 md:p-12 mb-16 shadow-inner"
+          className="rounded-2xl p-8 md:p-12 mb-16 shadow-inner"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-8">
             Mission & Vision
