@@ -71,8 +71,8 @@ export default async function CategoryPage({
             key={product.id}
             className="block"
           >
-            <div className=" rounded-xl  overflow-hidden group cursor-pointer border border-gray-200 hover:border-indigo-400 h-full flex flex-col">
-              <div className="relative w-full h-100  flex items-center justify-center overflow-hidden aspect-square">
+            <div className=" rounded-xl bg-white overflow-hidden group cursor-pointer border-t-4 border-red-500 h-full flex flex-col">
+              <div className="relative  w-full h-100  flex items-center justify-center overflow-hidden aspect-square">
                 <Image
                   src={product.image}
                   alt={product.name}
@@ -81,14 +81,14 @@ export default async function CategoryPage({
                 />
               </div>
               <div className="p-6 flex-grow flex flex-col">
-                <h2 className="text-2xl font-semibold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors duration-300">
+                <h2 className="text-2xl font-semibold  text-gray-900 mb-2  transition-colors duration-300">
                   {product.name}
                 </h2>
                 <p className="text-gray-600 text-sm flex-grow">
                   {product.description}
                 </p>
                 <div className="mt-4 text-center">
-                  <span className="inline-block bg-indigo-500 text-white font-bold py-2 px-4 rounded-full text-sm">
+                  <span className="inline-block bg-red-500 text-white font-bold py-2 px-4 rounded-full text-sm">
                     View Details
                   </span>
                 </div>

@@ -28,7 +28,7 @@ export default function Header() {
   const [submenuOpen, setSubmenuOpen] = useState(false);
 
   return (
-    <header className="bg-gray-900 shadow md:sticky md:top-0 z-50">
+    <header className="md:sticky md:top-0 z-50">
       <nav className="container mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <Link
@@ -49,7 +49,7 @@ export default function Header() {
 
         {/* Hamburger */}
         <button
-          className="lg:hidden flex items-center px-3 py-2 border rounded text-white hover:text-red-600 border-gray-400"
+          className="lg:hidden flex items-center px-3 py-2 border rounded text-red-600 hover:text-red-600 hover:text-red-600 border-gray-400"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label={mobileMenuOpen ? "Close Menu" : "Open Menu"}
         >
@@ -92,7 +92,7 @@ export default function Header() {
               >
                 <button
                   onClick={() => setSubmenuOpen(!submenuOpen)}
-                  className="flex items-center gap-1 text-white hover:bg-[#B20000] p-2 focus:outline-none"
+                  className="flex items-center gap-1 text-red-600 hover:text-white hover:bg-[#B20000] p-2 focus:outline-none"
                   aria-haspopup="true"
                   aria-expanded={submenuOpen}
                 >
@@ -112,12 +112,12 @@ export default function Header() {
                   </svg>
                 </button>
                 {submenuOpen && (
-                  <ul className="absolute left-0 mt-2 w-40 bg-[#FFE6E6] border border-gray-200 shadow-lg rounded-lg z-10">
+                  <ul className="absolute left-0 mt-2 w-40 bg-[#FFE6E6] text-gray-900 border border-gray-200 shadow-lg rounded-lg z-10">
                     {link.submenu.map((sublink) => (
                       <li key={sublink.name}>
                         <Link
                           href={sublink.href}
-                          className="block px-4 py-2 hover:border-red-600 bg-[#F8F8F8]"
+                          className="block px-4 py-2 hover:border-red-600"
                           onClick={() => setSubmenuOpen(false)}
                         >
                           {sublink.name}
@@ -131,7 +131,7 @@ export default function Header() {
               <li key={link.name}>
                 <Link
                   href={link.href}
-                  className="text-white hover:bg-red-600 p-2"
+                  className="text-red-600 hover:text-white hover:bg-red-600 p-2"
                 >
                   {link.name}
                 </Link>
@@ -142,12 +142,12 @@ export default function Header() {
       </nav>
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <ul className="lg:hidden flex flex-col gap-2 px-6 pb-4 bg-gray-800 shadow-md">
+        <ul className="lg:hidden flex flex-col gap-2 px-6 pb-4  shadow-md">
           {navLinks.map((link) =>
             link.submenu ? (
               <li key={link.name} className="relative">
                 <button
-                  className="flex items-center w-full px-2 py-2 text-white hover:bg-red-600"
+                  className="flex items-center w-full px-2 py-2 text-red-600 hover:text-white hover:bg-red-600"
                   onClick={() => setSubmenuOpen(!submenuOpen)}
                   aria-haspopup="true"
                   aria-expanded={submenuOpen}
@@ -173,7 +173,7 @@ export default function Header() {
                       <li key={sublink.name}>
                         <Link
                           href={sublink.href}
-                          className="block px-2 py-2 text-white hover:bg-red-600"
+                          className="block px-2 py-2 text-red-600 hover:text-white hover:bg-red-600"
                           onClick={() => {
                             setSubmenuOpen(false);
                             setMobileMenuOpen(false);
@@ -190,7 +190,7 @@ export default function Header() {
               <li key={link.name}>
                 <Link
                   href={link.href}
-                  className="block px-2 py-2 text-white hover:bg-red-600"
+                  className="block px-2 py-2 text-red-600 hover:text-white hover:bg-red-600"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.name}

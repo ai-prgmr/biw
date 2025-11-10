@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Search from "@/app/components/Search";
-
+import SearchComponent from "@/app/components/Search";
+import Link from "next/link";
+import { Mail, ArrowRight } from "lucide-react";
 export default function HeroSection() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -41,7 +42,7 @@ export default function HeroSection() {
         animate="visible"
       >
         <motion.h1
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg"
+          className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg"
           variants={itemVariants}
         >
           Premium Iron & Steel Products
@@ -59,13 +60,34 @@ export default function HeroSection() {
           Discover a comprehensive range of high-quality industrial components
           and raw materials designed for durability and performance.
         </motion.p>
-
         {/* Search Bar */}
-        <motion.div className="w-full max-w-md" variants={itemVariants}>
+        <motion.div className="w-full max-w-xl" variants={itemVariants}>
           <div className="relative">
-            <Search />
+            <SearchComponent />
           </div>
         </motion.div>
+        {/* --- NEW CTA BUTTONS --- */}
+        <motion.div
+          className="flex flex-col sm:flex-row gap-4 mb-10"
+          variants={itemVariants}
+        >
+          {/* Primary CTA: Contact Sales (Red) */}
+          <Link
+            href="/contact"
+            className="flex items-center justify-center px-8 py-3 text-lg font-semibold bg-red-600 text-white rounded-lg shadow-xl hover:bg-red-700 transition-colors duration-300 min-w-[200px]"
+          >
+            <Mail className="w-5 h-5 mr-2" /> Contact Sales
+          </Link>
+
+          {/* Secondary CTA: View Products (Outline) */}
+          <Link
+            href="/products"
+            className="flex items-center justify-center px-8 py-3 text-lg font-semibold border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors duration-300 min-w-[200px]"
+          >
+            View Products <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
+        </motion.div>
+        {/* --- END CTA BUTTONS --- */}
       </motion.div>
     </section>
   );

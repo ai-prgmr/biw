@@ -1,6 +1,6 @@
 export default function Catalogue() {
   return (
-    <section className="text-white w-full text-center pt-12">
+    <section className="text-gray-900 w-full text-center pt-12">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-6">
           Download Our Latest Catalogue
@@ -13,7 +13,7 @@ export default function Catalogue() {
         <a
           href="/Barnagar_Catalogue.pdf"
           download
-          className="inline-flex items-center bg-white text-indigo-700 font-bold py-4 px-8 rounded-full shadow-lg hover:bg-gray-100 hover:scale-105 transition-all duration-300 text-lg"
+          className="inline-flex items-center bg-white text-red-700 font-bold py-4 px-8 rounded-full shadow-lg hover:bg-gray-100 hover:scale-105 transition-all duration-300 text-lg"
         >
           <svg
             className="w-6 h-6 mr-3"

@@ -89,16 +89,16 @@ export default function CategorySection() {
             variants={categoryItemVariants} // Individual card animation
           >
             <Link href={`/${category.slug}`} className="block h-full">
-              <div className="h-full rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group cursor-pointer border border-gray-200 hover:border-indigo-600">
+              <div className="h-full rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group cursor-pointer border border-gray-200 hover:border-red-600">
                 <div className="bg-white p-6">
-                  <h3 className="h-14 text-2xl font-semibold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors duration-300">
+                  <h3 className="h-14 text-2xl font-semibold text-gray-900 mb-2 group-hover:text-red-600 transition-colors duration-300">
                     {category.name}
                   </h3>
                   <p className="text-gray-600 text-sm">
                     {category.description}
                   </p>
                 </div>
-                <div className=" bg-indigo-500 text-white py-3 text-center font-bold group-hover:bg-indigo-600 transition-colors duration-300">
+                <div className=" bg-red-600 text-white py-3 text-center font-bold group-hover:bg-red-600 transition-colors duration-300">
                   View Products
                 </div>
               </div>

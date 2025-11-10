@@ -102,8 +102,8 @@
 // }
 "use client";
 import * as React from "react";
-import { motion, useInView } from "framer-motion";
-import { Mail, Phone } from "lucide-react";
+import { motion } from "framer-motion";
+import { Mail, Phone, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -240,11 +240,13 @@ const Stepper = () => {
 
             {/* Progress line */}
             {i < steps.length - 1 && (
-              <div
-                className={`absolute top-1/2 -right-3 w-6 h-0.5 hidden md:block ${
-                  active > i ? "bg-red-600" : "bg-gray-300"
-                }`}
-              />
+              <div>
+                <ArrowRight
+                  className={`absolute top-1/2 -right-3 w-6 h-6 hidden md:block ${
+                    active > i ? "text-red-600" : "text-gray-300"
+                  }`}
+                />
+              </div>
             )}
           </motion.div>
         ))}
@@ -279,7 +281,6 @@ export default function AboutPage() {
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true, amount: 0.1 },
     transition: { duration: 0.6 },
-    useInView: true,
   };
 
   return (
@@ -433,12 +434,12 @@ export default function AboutPage() {
         {/* ==== CALL TO ACTION (CTA) ==== */}
         <motion.section
           {...fadeInViewProps}
-          className="bg-gray-800 text-white rounded-2xl p-8 md:p-12 text-center shadow-2xl"
+          className="bg-white border-t-4 border-red-500 rounded-2xl p-8 md:p-12 text-center shadow-2xl"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-red-500">
             Ready to Experience the Difference?
           </h2>
-          <p className="text-lg mb-6 max-w-2xl mx-auto text-gray-200">
+          <p className="text-lg mb-6 max-w-2xl mx-auto text-gray-900">
             Let us supply the quality wire products your project deserves.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -23,14 +23,14 @@ const ContactInfo: React.FC = () => (
     {/* Direct Contact Methods */}
 
     {/* Operating Hours (Unchanged) */}
-    <div className="bg-gray-300 p-8 rounded-xl shadow-lg border border-gray-100">
+    <div className=" p-8 rounded-xl shadow-lg border-t-4 border-red-600">
       <h3 className="text-2xl font-serif text-gray-800 mb-4 font-bold">
         Business Hours
       </h3>
       <ul className="space-y-2 text-lg text-gray-700">
         <li className="flex justify-between items-center border-b pb-1">
           <p className="font-semibold">Monday - Saturday</p>
-          <p>9:00 AM - 5:00 PM</p>
+          <p>9:30 AM - 8:00 PM</p>
         </li>
         <li className="flex justify-between items-center">
           <p className="font-semibold text-red-600">Sunday</p>
@@ -40,7 +40,7 @@ const ContactInfo: React.FC = () => (
     </div>
 
     {/* Physical Address */}
-    <div className="flex items-center text-lg text-gray-700 p-4 border border-gray-300 rounded-lg bg-gray-300 shadow-sm">
+    <div className="flex items-center text-lg text-gray-700 p-4 border-t-4 border-red-600 rounded-lg shadow-sm">
       <MapPin className="w-6 h-6 mr-3 text-pink-600 flex-shrink-0" />
       <p>
         Plot No - 25/A, Udyog Nagar, Navlakha Road, New Loha Mandi, Near Anaj
@@ -53,7 +53,7 @@ const ContactInfo: React.FC = () => (
 const ContactPage: React.FC = () => {
   return (
     <>
-      <div className="min-h-screen bg-white pt-12 pb-20">
+      <div className="min-h-screen pt-12 pb-20">
         <div className="container mx-auto px-4">
           {/* Header */}
           <motion.div
@@ -74,7 +74,7 @@ const ContactPage: React.FC = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
-              className="flex flex-col justify-center space-y-6 bg-gray-300 p-8 rounded-xl shadow-2xl border border-pink-100"
+              className="flex flex-col justify-center space-y-6  p-8 rounded-xl shadow-2xl border-t-4 border-red-600"
             >
               <h2 className="text-4xl font-serif text-gray-800 mb-4 font-bold">
                 Let&apos;s Business Together!

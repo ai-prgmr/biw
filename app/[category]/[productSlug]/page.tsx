@@ -54,7 +54,7 @@ export default async function ProductPage({
 
   if (!product) {
     return (
-      <div className="container mx-auto px-4 py-12 text-center bg-transparent">
+      <div className="container mx-auto px-4 py-12 text-center">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
           Product Not Found
         </h1>
@@ -73,13 +73,13 @@ export default async function ProductPage({
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <div className="bg-transparent rounded-xl shadow-lg p-8 border border-gray-200 flex flex-col md:flex-row gap-8">
+      <div className="bg-white rounded-xl shadow-lg p-8 border-t-4 border-red-500 flex flex-col md:flex-row gap-8">
         {/* Product Image */}
-        <div className="md:w-1/2 flex justify-center bg-transparent items-center p-4 rounded-lg">
+        <div className="md:w-1/2 flex justify-center items-center p-4 rounded-lg">
           <Image
             src={product.image}
             alt={product.name}
-            width={600}
+            width={400}
             height={450}
             objectFit="contain"
             className="rounded-md"
@@ -88,7 +88,7 @@ export default async function ProductPage({
 
         {/* Product Details */}
         <div className="md:w-1/2">
-          <h1 className="text-4xl font-extrabold text-gray-900 mb-4">
+          <h1 className="text-4xl font-extrabold text-red-600 mb-4">
             {product.name}
           </h1>
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
@@ -97,7 +97,7 @@ export default async function ProductPage({
 
           {/* Sizes Available */}
           <div className="mb-6">
-            <h2 className="text-2xl font-semibold text-indigo-700 mb-3">
+            <h2 className="text-2xl font-semibold text-red-600 mb-3">
               Available Sizes:
             </h2>
             <div className="flex flex-wrap gap-3">
@@ -115,7 +115,7 @@ export default async function ProductPage({
           {/* Customization Options */}
           {product.customization && product.customization.length > 0 && (
             <div className="mb-6">
-              <h2 className="text-2xl font-semibold text-indigo-700 mb-3">
+              <h2 className="text-2xl font-semibold text-red-600 mb-3">
                 Customization Options:
               </h2>
               <ul className="list-disc list-inside text-lg text-gray-700 space-y-1">
@@ -129,7 +129,7 @@ export default async function ProductPage({
           {/* How to measure */}
           {product.customization && product.customization.length > 0 && (
             <div className="mb-6">
-              <h2 className="text-2xl font-semibold text-indigo-700 mb-3">
+              <h2 className="text-2xl font-semibold text-red-600 mb-3">
                 How to measure
               </h2>
               <ul className="list-disc list-inside text-lg text-gray-700 space-y-1">
@@ -143,7 +143,7 @@ export default async function ProductPage({
           {/* Product Usage */}
           {product.customization && product.customization.length > 0 && (
             <div className="mb-6">
-              <h2 className="text-2xl font-semibold text-indigo-700 mb-3">
+              <h2 className="text-2xl font-semibold text-red-600 mb-3">
                 Product Usage
               </h2>
               <ul className="list-disc list-inside text-lg text-gray-700 space-y-1">
@@ -172,7 +172,7 @@ export default async function ProductPage({
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <Link
               href="/contact"
-              className="flex-1 text-center bg-indigo-600 text-white font-bold py-3 px-6 rounded-md shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-colors duration-300 text-lg"
+              className="flex-1 text-center bg-red-600 text-white font-bold py-3 px-6 rounded-md shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-colors duration-300 text-lg"
             >
               Inquire / Request Quote
             </Link>
