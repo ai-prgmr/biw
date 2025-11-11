@@ -1,5 +1,14 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
+const categoryContainerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
 export default function CategorySection() {
   const categories = [
     {
@@ -45,29 +54,7 @@ export default function CategorySection() {
       description: "Durable sheets for screening, ventilation, or aesthetics.",
     },
   ];
-  const categoryContainerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
 
-  const categoryItemVariants = {
-    hidden: { opacity: 0, scale: 0.9, y: 50 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 15,
-      },
-    },
-  };
   return (
     <motion.section
       className="container mx-auto px-4 py-16"
@@ -86,7 +73,19 @@ export default function CategorySection() {
         {categories.map((category) => (
           <motion.div
             key={category.slug}
-            variants={categoryItemVariants} // Individual card animation
+            variants={{
+              hidden: { opacity: 0, scale: 0.9, y: 50 },
+              visible: {
+                opacity: 1,
+                scale: 1,
+                y: 0,
+                transition: {
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 15,
+                },
+              },
+            }}
           >
             <Link href={`/${category.slug}`} className="block h-full">
               <div className="h-full rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group cursor-pointer border border-gray-200 hover:border-red-600">

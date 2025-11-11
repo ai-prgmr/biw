@@ -49,7 +49,7 @@ export default function Header() {
 
         {/* Hamburger */}
         <button
-          className="lg:hidden flex items-center px-3 py-2 border rounded text-red-600 hover:text-red-600 hover:text-red-600 border-gray-400"
+          className="lg:hidden flex items-center px-3 py-2 border rounded text-red-600 border-gray-400"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label={mobileMenuOpen ? "Close Menu" : "Open Menu"}
         >

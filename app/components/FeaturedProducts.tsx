@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
@@ -21,18 +22,6 @@ export default function FeaturedProducts() {
       transition: {
         delayChildren: 0.1,
         staggerChildren: 0.08,
-      },
-    },
-  };
-
-  const featuredItemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.4,
-        ease: "easeOut",
       },
     },
   };
@@ -61,7 +50,20 @@ export default function FeaturedProducts() {
         variants={featuredContainerVariants}
       >
         {gridItems.map((product, index) => (
-          <motion.div key={index} variants={featuredItemVariants}>
+          <motion.div
+            key={index}
+            variants={{
+              hidden: { opacity: 0, y: 30 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 0.4,
+                  ease: "easeOut",
+                },
+              },
+            }}
+          >
             {product ? (
               <Link
                 href={`/${product.categorySlug}/${product.slug}`}
