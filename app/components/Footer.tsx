@@ -54,7 +54,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/perforated-sheets" className="hover:text-white">
+                <Link href="/perforated_sheets" className="hover:text-white">
                   Perforated Sheets
                 </Link>
               </li>
