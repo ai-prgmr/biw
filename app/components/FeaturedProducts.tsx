@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ChevronRight, ShoppingCart } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { productsData } from "@/lib/productData";
 export default function FeaturedProducts() {

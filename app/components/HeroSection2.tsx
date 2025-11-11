@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, ArrowRight, Search } from "lucide-react";
+import { Mail, ArrowRight } from "lucide-react";
 import SearchComponent from "./Search";
 
 // --- Animation Variants ---
