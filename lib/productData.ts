@@ -84,7 +84,7 @@ export const productsData: Record<string, ProductType[]> = {
       categorySlug: "nails",
       description:
         "A small, thin nail with a very small head, designed for securing thin sheets of wood or panels. Can be driven in without splitting the material.",
-      image: "/biw/images/Panel-pin-removebg.png",
+      image: "/biw/images/panel-pin-removebg.png",
       sizes: ["N/A"],
       customization: ["Bright Finish", "Zinc Plated"],
       basePrice: 0.06,
@@ -120,7 +120,7 @@ export const productsData: Record<string, ProductType[]> = {
       categorySlug: "nails",
       description:
         "Short, thick shank nail with a large, flat head for securing roofing felt, shingles, and other roofing materials. Often galvanized for corrosion resistance.",
-      image: "/biw/images/roofing-nail.png",
+      image: "/biw/images/Roofing-nail.png",
       sizes: ["0.75 inch", "1 inch", "1.25 inch"],
       customization: ["Galvanized", "Electro-Galvanized"],
       basePrice: 0.06,
@@ -184,7 +184,7 @@ export const productsData: Record<string, ProductType[]> = {
       categorySlug: "hooks",
       description:
         "A right-angled hook, ideal for hanging pictures, tools, and other items from walls or ceilings. Provides a sturdy and reliable hanging point.",
-      image: "/biw/images/L-bolt-removebg.png",
+      image: "/biw/images/L-Bolt-removebg.png",
       sizes: ["N/A"],
       customization: ["N/A"],
       basePrice: 0.25,
@@ -196,7 +196,7 @@ export const productsData: Record<string, ProductType[]> = {
       categorySlug: "hooks",
       description:
         "A hook shaped like the letter 'J', perfect for hanging heavier items and for securing cables, ropes, or chains. Its design provides good load distribution.",
-      image: "/biw/images/j-hook-removebg.png",
+      image: "/biw/images/J-hook-removebg.png",
       sizes: ["N/A"],
       customization: ["N/A"],
       basePrice: 0.35,
@@ -364,7 +364,7 @@ export const productsData: Record<string, ProductType[]> = {
       categorySlug: "perforated_sheets",
       description:
         "Lightweight and corrosion-resistant sheets, ideal for filtration, architectural facades, and ventilation systems where weight is a factor.",
-      image: "/biw/images/aluminium-ps.webp",
+      image: "/biw/images/aluminium-PS.webp",
       sizes: ["Custom Hole Sizes"],
       customization: ["Based on Requirement"],
       basePrice: 100,
@@ -376,7 +376,7 @@ export const productsData: Record<string, ProductType[]> = {
       categorySlug: "perforated_sheets",
       description:
         "Cold Rolled Coil (CRC) sheets offering a smooth finish and excellent flatness, suitable for interior decoration and general manufacturing.",
-      image: "/biw/images/crc-ps.webp",
+      image: "/biw/images/CRC-ps.webp",
       sizes: ["Custom Thickness"],
       customization: ["Based on Requirement"],
       basePrice: 100,
