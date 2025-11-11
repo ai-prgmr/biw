@@ -34,7 +34,7 @@ export default function HeroSection2() {
         >
           {/* Hero Image - Using object-cover to ensure it fills the space */}
           <Image
-            src={"/images/hero-section.jpeg"}
+            src={"/biw/images/hero-section.jpeg"}
             alt="Assorted iron and steel hardware products on a wooden background"
             quality={90}
             fill

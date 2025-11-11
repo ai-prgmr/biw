@@ -288,7 +288,7 @@ export default function AboutPage() {
       {/* ==== HERO ==== */}
       <section className="relative h-[60vh] min-h-[400px] overflow-hidden">
         <Image
-          src="/images/hero-wire-factory.png"
+          src="/biw/images/hero-wire-factory.png"
           alt="Barnagar Iron Works factory floor"
           fill
           priority
@@ -344,7 +344,7 @@ export default function AboutPage() {
           </div>
           <div className="relative h-80 rounded-xl overflow-hidden shadow-xl">
             <Image
-              src="/images/hero-wire-factory.png"
+              src="/biw/images/hero-wire-factory.png"
               alt="Historical photo of Barnagar Iron Works"
               fill
               className="object-cover"

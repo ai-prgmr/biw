@@ -36,7 +36,7 @@ export default function Header() {
           className="mb-4 md:mb-0 flex flex-col md:flex-row items-center gap-2"
         >
           <Image
-            src="/biw_logo.png"
+            src="/biw/biw_logo.png"
             alt="Barnagar Iron Works Logo"
             width={150}
             height={50}

@@ -23,7 +23,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src={"/images/hero-section.jpeg"}
+          src={"/biw/images/hero-section.jpeg"}
           alt="Assorted iron and steel hardware products on a wooden background"
           layout="fill"
           objectFit="cover"

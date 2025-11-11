@@ -7,7 +7,6 @@ const nextConfig: NextConfig = {
   },
   // assetPrefix: "assetPrefix",
   basePath: "/biw",
-  assetPrefix: "/biw",
   output: "export",
 };
 
