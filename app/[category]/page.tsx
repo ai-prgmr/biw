@@ -13,7 +13,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { category: string };
+  params: Promise<{ category: string }>;
 }) {
   const paramsCategory = await params;
   const categoryName = categories.find(
@@ -30,7 +30,7 @@ export async function generateMetadata({
 export default async function CategoryPage({
   params,
 }: {
-  params: { category: string };
+  params: Promise<{ category: string }>;
 }) {
   const { category: categorySlug } = await params;
   const products = productsData[categorySlug] || [];
