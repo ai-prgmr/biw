@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { MapPin, Mail, MessageSquare } from "lucide-react";
+import { MapPin, Mail, MessageSquare, PhoneCall } from "lucide-react";
 
 // --- Configuration ---
 // Replace these placeholders with your actual details
@@ -85,7 +85,17 @@ const ContactPage: React.FC = () => {
                 here to help. Reach out to us via WhatsApp or email, and our
                 team will get back to you promptly.
               </p>
-
+              {/* Contact Buttons */}
+              <motion.a
+                href="tel:+919826186686"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center justify-center w-full bg-green-500 text-white px-6 py-4 rounded-md text-xl font-bold hover:bg-green-600 transition duration-300 shadow-lg"
+              >
+                <PhoneCall className="w-7 h-7 mr-3" />
+                Call Us Now
+              </motion.a>
               <motion.a
                 href={WHATSAPP_LINK}
                 target="_blank"
@@ -96,10 +106,6 @@ const ContactPage: React.FC = () => {
                 <MessageSquare className="w-7 h-7 mr-3" />
                 Start Custom Order on WhatsApp
               </motion.a>
-
-              <div className="text-center py-2">
-                <span className="text-gray-500">OR</span>
-              </div>
 
               <motion.a
                 href={`mailto:${CONTACT_EMAIL}`}
